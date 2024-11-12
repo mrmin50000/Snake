@@ -37,7 +37,12 @@ namespace Snake
                         k += 1;
                     }
 
-                    
+
+                    for (int f = list.Count - 1; f > 0; f--)
+                    {
+                        map[list[0].x, list[0].y] = ' ';
+                        map[list[f].x, list[f].y] = '@';
+                    }
 
 
 
@@ -52,12 +57,7 @@ namespace Snake
 
             }
 
-            
-            for (int f = list.Count - 1; f > 0; f--)
-            {
-                map[list[0].x, list[0].y] = ' ';
-                map[list[f].x, list[f].y] = '@';
-            }
+
 
 
 
@@ -112,6 +112,14 @@ namespace Snake
             {
                 Console.WriteLine("Lose");
                 Console.ReadKey();
+            }
+            for (int i = 0; i < list.Count - 1; i++)
+            {
+                if (HeadPos.x == list[i].x && HeadPos.y == list[i].y)
+                {
+                    Console.WriteLine("Lose");
+                    Console.ReadKey();
+                }
             }
 
 

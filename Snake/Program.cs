@@ -18,7 +18,7 @@ namespace Snake
             Direction d = Direction.Right;
             
             
-            List<Point> list = new List<Point>() { new Point(4, 10), new Point(4 , 11), new Point(4, 12), new Point(4, 13)};
+            List<Point> list = new List<Point>() { new Point(4, 10), new Point(4 , 11), new Point(4, 12), new Point(4, 13) };
             
             Console.ForegroundColor = ConsoleColor.Blue;
             Snake p = new Snake(map, list, d);

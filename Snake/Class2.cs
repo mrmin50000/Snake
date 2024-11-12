@@ -18,6 +18,18 @@ namespace Snake
             {
                 map[x, y] = '.';
             }
+            else
+            {
+                if (map[x + 1, y] != '#')
+                    map[x + 1, y] = '.';
+                else if (map[x - 1, y] != '#')
+                    map[x - 1, y] = '.';
+                else if (map[x, y + 1] != '#')
+                    map[x, y + 1] = '.';
+                else if (map[x, y - 1] != '#')
+                    map[x, y - 1] = '.';
+            }
+         
 
 
         }
